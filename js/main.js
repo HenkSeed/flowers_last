@@ -79,17 +79,19 @@ $(document).ready(function () {
 		$.fancybox.open(
 			[
 				{
-					src: 'https://source.unsplash.com/IvfoDk30JnI/1500x1000',
+					src: 'https://images.unsplash.com/photo-1617709391063-18aafa02589f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1936&q=80',
 					opts: {
 						caption: 'First caption',
-						thumb: 'https://source.unsplash.com/IvfoDk30JnI/240x160',
+						thumb:
+							'https://images.unsplash.com/photo-1617709391063-18aafa02589f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1936&q=80/240x160',
 					},
 				},
 				{
-					src: 'https://source.unsplash.com/0JYgd2QuMfw/1500x1000',
+					src: 'https://images.unsplash.com/photo-1503652601-557d07733ddc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1536&q=80/1500x1000',
 					opts: {
 						caption: 'Second caption',
-						thumb: 'https://source.unsplash.com/0JYgd2QuMfw/240x160',
+						thumb:
+							'https://images.unsplash.com/photo-1503652601-557d07733ddc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1536&q=80/240x160',
 					},
 				},
 			],
@@ -100,5 +102,24 @@ $(document).ready(function () {
 				},
 			}
 		);
+	});
+	const hides = document.querySelectorAll('.hide');
+	const more = document.querySelector('.more');
+
+	more.addEventListener('click', (event) => {
+		event.preventDefault();
+		more.classList.toggle('more-up');
+		more.classList.toggle('more-down');
+		if (more.textContent === 'Все цветы') {
+			console.log('more.textContent-1: ', more.textContent);
+			more.textContent = 'Скрыть';
+		} else {
+			console.log('more.textContent-2: ', more.textContent);
+			more.textContent = 'Все цветы';
+		}
+		hides.forEach((hide) => {
+			hide.classList.toggle('goods__hidden');
+			// hide.classList.toggle('goods__hidden');
+		});
 	});
 });

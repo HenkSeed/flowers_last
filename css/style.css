@@ -228,7 +228,9 @@ body {
 	padding-bottom: 100px;
 }
 .goods__hidden {
-	/* display: none; */
+	display: none;
+	/* visibility: hidden;
+	opacity: 0; */
 }
 .section-description {
 	font-size: 18px;
@@ -325,9 +327,14 @@ body {
 	display: inline-block;
 	width: 10px;
 	height: 5px;
-	background: url('../img/caret.svg') no-repeat center;
 	margin-left: 14px;
 	vertical-align: middle;
+}
+.more-down:after {
+	background: url('../img/caret-down.svg') no-repeat center;
+}
+.more-up:after {
+	background: url('../img/caret-up.svg') no-repeat center;
 }
 .offer {
 	padding-top: 100px;
