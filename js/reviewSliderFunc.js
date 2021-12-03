@@ -2,7 +2,7 @@ function reviewSliderFunc() {
 	const reviewsSlider = new Swiper('.reviews-slider', {
 		// Optional parameters
 		// direction: 'vertical',
-		loop: true,
+		loop: false,
 		slidesPerView: 1,
 		// slidesPerGroup: 4,
 

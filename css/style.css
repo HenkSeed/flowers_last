@@ -161,6 +161,7 @@ body {
 }
 .review-link {
 	color: #f24841;
+	cursor: pointer;
 }
 .review-image {
 	position: relative;
